@@ -16,7 +16,14 @@
                     <input type="text" ng-model="login.email" />
                     <input type="password" ng-model="login.password" />
                     <button>Login</button>
-                    <!-- It's "signUp" because that's the state found in app/app.js -->
+                    <!--
+                        1. It's "signUp" because that's the state found in app/app.js
+                        2. The only reason anything recognizes ui-sref is because ui.router
+                           is referenced in app.js, the same applies for ui-view
+                        3. So presumably what happens is that the href looks at the states
+                           available in app.js, chooses signUp which goes to /signup route and
+                           renders signup.html inside the ui-view.
+                    -->
                     <a ui-sref="signUp">Register</a>
                 </div>
             </div>
