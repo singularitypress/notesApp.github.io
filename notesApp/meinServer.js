@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bParser = require('body-parser');
 
 var app = express();
-var authenticationController = require('./server/controllers/authentication-controller');
+var authController = require('./server/controllers/authentication-controller');
 
 mongoose.connect('mongodb://localhost:27017/note-app');
 
@@ -19,7 +19,8 @@ app.get('/', function(req, res) {
 });
 
 //Authentication
-app.post('/api/user/signup', authenticationController.signup);
+app.post('/api/user/signup', authController.signup);
+app.post('/api/user/login', authController.login);
 
 app.listen('3000', function(){
     console.log("Listening for Localhost:3000");

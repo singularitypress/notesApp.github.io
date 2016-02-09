@@ -10,12 +10,12 @@
   <body>
     <div class="header">
         <div class="row">
-            <div class="large-12 small-12 columns">
+            <div class="large-12 small-12 columns" ng-controller="NavigationController">
                 <p id="headline">https://github.com/singularitypress/notesApp.github.io/</p>
                 <div>
                     <input type="text" ng-model="login.email" />
                     <input type="password" ng-model="login.password" />
-                    <button>Login</button>
+                    <button ng-click="logUserIn()">Login</button>
                     <!--
                         1. It's "signUp" because that's the state found in app/app.js
                         2. The only reason anything recognizes ui-sref is because ui.router
@@ -46,6 +46,7 @@
     <script src="app/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
     <script src="app/signup/signup-controller.js"></script>
+    <script src="app/navigation/navigation-controller.js"></script>
     <!--
     <script src="js/foundationApp.js"></script>
 -->
