@@ -49,6 +49,10 @@ $main-colour: #0b3454;
     background-color: $main-colour;
     color: white;
     padding: 10px 10px 10px 10px;
+    z-index: 100;
+    position: fixed;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 .body {
@@ -63,8 +67,4 @@ $main-colour: #0b3454;
     background-size: cover;
     background-position: center;
     color: white;
-}
-
-#headline {
-    word-wrap: break-word;
 }
